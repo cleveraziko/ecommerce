@@ -33,6 +33,10 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'category',
     'accounts',
+    'store',
+    # for admin interface   pip install django-admin-interface
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -107,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz-uz'
 
 TIME_ZONE = 'UTC'
 
@@ -115,7 +119,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+UZ_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -136,3 +140,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom UserModel
 
 AUTH_USER_MODEL = 'accounts.Account' 
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# for django interface
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+SILENCED_SYSTEM_CHECKS = ['security.W019']
