@@ -32,7 +32,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-3 col-6">
-                    <a href="./" class="brand-wrap">
+                    <a href="{% url 'home' %}" class="brand-wrap">
                         <img class="logo" src="{% static './images/logo.png' %}">
                     </a> <!-- brand-wrap.// -->
                 </div>
@@ -43,6 +43,7 @@
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a href="{% url 'store' %}">All products </a></li>
                         {% for category in links %}
                         <li><a class="dropdown-item" href="{{category.get_url}}">{{category.category_name}}</a></li>
                         {% endfor %}
@@ -62,7 +63,7 @@
                 </div> {% endcomment %}
 
                 <!-- col.// -->
-                <a href="./store.html" class="btn btn-outline-primary">Store</a>
+                <a href="{% url 'store' %}" class="btn btn-outline-primary">Store</a>
 
                 <div class="col-lg  col-md-6 col-sm-12 col">
                     <form action="#" class="search">
