@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'category',
     'accounts',
     'store',
+    'carts',
     # for admin interface   pip install django-admin-interface
     'admin_interface',
     'colorfield',
