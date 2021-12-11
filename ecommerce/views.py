@@ -8,3 +8,5 @@ def home(request):
         'products' :product,
     }
     return render(request,'home.html',contex)
+
+
